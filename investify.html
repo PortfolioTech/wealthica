@@ -11,21 +11,26 @@
     if (redirectToDevEnvironment(document.domain)) {
       console.log('redirecting...');
       window.location.href = "https://investify.simple-url.com:8085/investify.html";
-    }    
+    }        
+  </script>
+  <script>
+    function gotoSettings() {
+      console.log('gotoSettings...');
+      window.location.href = "settings.html"
+    }
   </script>
 </head>
 
 <body>
-  <div id="EnvDevWarning"></div>
+  <div id="DevWarning"></div>
   <div id="main" style="width:100%">
-    <div id="accounts-vue">Test DEV 003</div>
-  </div>
-  <div>
-    <iframe src="tools.html" style="width:100%; border:none;"></iframe>
+    <div id="version">2024.03.05.110</div>
+    <div id="accounts-vue"></div>
+    <div><button onclick="gotoSettings()">Settings</button></div>
   </div>
   <script>
     if (isDevEnvironment(document.domain)) {
-      document.getElementById('EnvDevWarning').style.backgroundColor = 'red';
+      document.getElementById('DevWarning').style.backgroundColor = 'red';
     }
   </script>
 </body>
