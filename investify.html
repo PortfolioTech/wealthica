@@ -10,6 +10,7 @@
       console.log('github, then check if dev is set');
       if (getStoreDevValue()) {
         console.log('dev is set, then redirect');
+        window.location.href = "https://investify.simple-url.com:8085/investify.html";
       }
       else {
         console.log('dev is not set, then stay');
@@ -23,7 +24,7 @@
 <body>
   <div id="main" style="width:100%">
     <div id="accounts-vue"></div>
-    Investify 2024.03.05.009
+    Investify 2024.03.05.010
   </div>
   <div>
     <iframe src="dev.html" style="width:100%; border:none;"></iframe>
