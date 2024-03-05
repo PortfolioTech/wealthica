@@ -4,11 +4,15 @@
 <head>
   <meta charset="UTF-8">
   <title>Investify Add-On</title>
+  <script src="src/js/main.js"></script>
   <script>
     if (document.domain.includes('github')) {
       console.log('github, then check if dev is set');
       if (getStoreDevValue()) {
         console.log('dev is set, then redirect');
+      }
+      else {
+        console.log('dev is not set, then stay');
       }
     } else {
       console.log('not github, then stay');
