@@ -9,10 +9,19 @@
 
 <body>
     <div>
+        <div id="env"></div>
         <button onclick="setStoreDevValue()">Set store dev value</button>
         <button onclick="getStoreDevValue()">Get store dev value</button>
         <button onclick="removeStoreDevValue()">Remove store dev value</button>
     </div>
+    <script>
+        /*if (!isInProduction()) {
+            document.getElementById('env').innerText = 'development';
+        } else {
+            document.getElementById('env').innerText = 'production';
+        }*/
+        document.getElementById('env').innerText = document.domain;
+    </script>
 </body>
 
 </html>
