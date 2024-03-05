@@ -1,40 +1,25 @@
-function setStoreDevValue() {
-    localStorage.setItem("dev", "true");
+const DevEnvironmentFlag = "DEV31620240503";
+
+function setDevEnvironmentFlag() {
+    localStorage.setItem(DevEnvironmentFlag, "true");
 }
 
-function getStoreDevValue() {
-    return localStorage.getItem("dev");
+function getDevEnvironmentFlag() {
+    return localStorage.getItem(DevEnvironmentFlag);
 }
 
-function alertStoreDevValue() {
-    return alert(getStoreDevValue());
+function alertDevEnvironmentFlag() {
+    return alert(getDevEnvironmentFlag());
 }
 
-function removeStoreDevValue() {
-    localStorage.removeItem("dev");
+function removeDevEnvironmentFlag() {
+    localStorage.removeItem(DevEnvironmentFlag);
 }
 
-function isDevMode(domain) {
-    return domain.includes('github') ? getStoreDevValue() : true;
+function isDevEnvironment(domain) {
+    return !domain.includes('github');
 }
 
-function redirectToDevEnv(domain) {
-    console.log('github', domain.includes('github'));
-    console.log('DevValue', getStoreDevValue());
-    console.log('Redirect', domain.includes('github') && getStoreDevValue());
+function redirectToDevEnvironment(domain) {
     return domain.includes('github') && getStoreDevValue();
-}
-
-function getNodeEnv() {
-    fetch('/node-env')
-        .then(response => response.json())
-        .then(data => {
-            console.log('NODE_ENV:', data.nodeEnv);
-            // Now you can use data.nodeEnv in your client-side code
-        });
-    /*
-    return app.get('/', (req, res) => {
-        res.render('index', { nodeEnv: process.env.NODE_ENV });
-    });*/
-    return "dev";
 }

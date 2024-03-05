@@ -24,6 +24,11 @@ body {
     height: 100%;
 }
 
+#EnvDevWarning {
+    height: 5px;
+    width: 100%;
+}
+
 .justify-left {
     text-align: left !important;
 }
