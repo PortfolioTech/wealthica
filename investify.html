@@ -4,12 +4,22 @@
 <head>
   <meta charset="UTF-8">
   <title>Investify Add-On</title>
+  <script>
+    if (document.domain.includes('github')) {
+      console.log('github, then check if dev is set');
+      if (getStoreDevValue()) {
+        console.log('dev is set, then redirect');
+      }
+    } else {
+      console.log('not github, then stay');
+    }
+  </script>
 </head>
 
 <body>
   <div id="main" style="width:100%">
     <div id="accounts-vue"></div>
-    Investify 2024.03.05.007
+    Investify 2024.03.05.008
   </div>
   <div>
     <iframe src="dev.html" style="width:100%; border:none;"></iframe>
