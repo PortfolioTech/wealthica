@@ -1,0 +1,29 @@
+√ Font not bold for entries
+√ CompanyCell :symoble :name
+√ security logo
+x increase logo security size
+√ Switch columns 
+√ font weigth
+√ toogle arrow visible when expanded
+√ Account CAD/USD: toogle
+√ security cash row
+√ total row
+√ color arrow up or down (percent and money cell)
+√ Dynamic table
+√ Positions from getPositions
+√ Bookvalue not highlited
+√ Total Portfolio %
+√ Remove totals on investment
+√ Total_CAD
+√ weight_total for whole acount
+√ calc weigth in holdings array
+√ Sort by Weigth
+√ Overall gain % total
+√ Arrow shift when invisible
+√ code refactoring
+publish on gitHub
+
+Daily gain $/%
+Tooltip
+filter on categorie investify
+publish on gitHub
