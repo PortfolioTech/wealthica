@@ -21,5 +21,8 @@ function isDevEnvironment(domain) {
 }
 
 function redirectToDevEnvironment(domain) {
+    console.log('github', domain.includes('github'));
+    console.log('DevFlag', getDevEnvironmentFlag());
+    console.log('Redirect?', domain.includes('github') && getDevEnvironmentFlag());
     return domain.includes('github') && getDevEnvironmentFlag();
 }

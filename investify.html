@@ -7,7 +7,9 @@
   <link rel="stylesheet" type="text/css" href="src/css/main.css">
   <script src="src/js/main.js"></script>
   <script>
+    console.log(document.domain);
     if (redirectToDevEnvironment(document.domain)) {
+      console.log('redirecting...');
       window.location.href = "https://investify.simple-url.com:8085/investify.html";
     }    
   </script>
@@ -16,7 +18,7 @@
 <body>
   <div id="EnvDevWarning"></div>
   <div id="main" style="width:100%">
-    <div id="accounts-vue"></div>
+    <div id="accounts-vue">Test DEV 001</div>
   </div>
   <script>
     if (isDevEnvironment(document.domain)) {
