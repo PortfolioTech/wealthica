@@ -21,5 +21,5 @@ function isDevEnvironment(domain) {
 }
 
 function redirectToDevEnvironment(domain) {
-    return domain.includes('github') && getStoreDevValue();
+    return domain.includes('github') && getDevEnvironmentFlag();
 }
