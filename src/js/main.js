@@ -6,12 +6,23 @@ function getStoreDevValue() {
     return localStorage.getItem("dev");
 }
 
+function alertStoreDevValue() {
+    return alert(getStoreDevValue());
+}
+
 function removeStoreDevValue() {
     localStorage.removeItem("dev");
 }
 
-function isInProduction() {
-    return getNodeEnv() === "production";
+function isDevMode(domain) {
+    return domain.includes('github') ? getStoreDevValue() : true;
+}
+
+function redirectToDevEnv(domain) {
+    console.log('github', domain.includes('github'));
+    console.log('DevValue', getStoreDevValue());
+    console.log('Redirect', domain.includes('github') && getStoreDevValue());
+    return domain.includes('github') && getStoreDevValue();
 }
 
 function getNodeEnv() {

@@ -6,18 +6,11 @@
   <title>Investify Add-On</title>
   <script src="src/js/main.js"></script>
   <script>
-    if (document.domain.includes('github')) {
-      console.log('github, then check if dev is set');
-      if (getStoreDevValue()) {
-        console.log('dev is set, then redirect');
-        window.location.href = "https://investify.simple-url.com:8085/investify.html";
-      }
-      else {
-        console.log('dev is not set, then stay');
-      }
-    } else {
-      console.log('not github, then stay');
-    }
+    console.log('document.domain', document.domain);
+    if (redirectToDevEnv(document.domain)) {
+      console.log('redirecting...');
+      window.location.href = "https://investify.simple-url.com:8085/investify.html";
+    }    
   </script>
 </head>
 
@@ -27,7 +20,7 @@
     Investify 2024.03.05.010
   </div>
   <div>
-    <iframe src="dev.html" style="width:100%; border:none;"></iframe>
+    <iframe src="tools.html" style="width:100%; border:none;"></iframe>
   </div>
 </body>
 
