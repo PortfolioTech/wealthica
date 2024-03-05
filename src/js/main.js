@@ -3,7 +3,7 @@ function setStoreDevValue() {
 }
 
 function getStoreDevValue() {
-    alert(localStorage.getItem("dev"));
+    return localStorage.getItem("dev");
 }
 
 function removeStoreDevValue() {
