@@ -10,12 +10,13 @@
     console.log(document.domain);
     if (redirectToDevEnvironment(document.domain)) {
       console.log('redirecting...');
+      window.location.href = "https://investify.simple-url.com:8085/investify.html";
     }        
   </script>
   <script>
     function gotoSettings() {
       console.log('gotoSettings...');
-      window.location.href = "settings.html"
+      window.location.href = "https://portfoliotech.github.io/wealthica/settings.html";
     }
   </script>
 </head>
@@ -23,7 +24,7 @@
 <body>
   <div id="DevWarning"></div>
   <div id="main" style="width:100%">
-    <div id="version">2024.03.05.111</div>
+    <div id="version">2024.03.05.113</div>
     <div id="accounts-vue"></div>
     <div><button onclick="gotoSettings()">Settings</button></div>
   </div>
