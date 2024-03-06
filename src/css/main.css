@@ -27,6 +27,39 @@ body {
 #DevWarning {
     height: 5px;
     width: 100%;
+    background-color: red;
+    visibility: hidden;
+}
+
+.footer-div {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 20px;
+    background-color: #243d57;
+    color: white;
+    font-size: 12px;
+    text-justify: center;
+    align-items: center;
+    font-weight: 100;
+}
+
+.footer-div>div {
+    display: inline-block;
+}
+
+.footer-div-settings {
+    float: right;
+    padding-left: 15px;
+    padding-right: 5px;
+}
+
+.footer-settings-icon:hover {
+    transform: scale(1.2);
+}
+
+.float-rigth {
+    float: right;
 }
 
 .justify-left {

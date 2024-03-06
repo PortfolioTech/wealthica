@@ -7,16 +7,8 @@
   <link rel="stylesheet" type="text/css" href="src/css/main.css">
   <script src="src/js/main.js"></script>
   <script>
-    console.log(document.domain);
     if (redirectToDevEnvironment(document.domain)) {
-      console.log('redirecting...');
-      window.location.href = "https://investify.simple-url.com:8085/investify.html";
-    }        
-  </script>
-  <script>
-    function gotoSettings() {
-      console.log('gotoSettings...');
-      window.location.href = "https://portfoliotech.github.io/wealthica/settings.html";
+      window.location.href = DevEnvironmentUrl;
     }
   </script>
 </head>
@@ -24,13 +16,28 @@
 <body>
   <div id="DevWarning"></div>
   <div id="main" style="width:100%">
-    <div id="version">2024.03.05.113</div>
     <div id="accounts-vue"></div>
-    <div><button onclick="gotoSettings()">Settings</button></div>
   </div>
+
+  <div id="footer" class="footer-div">
+    <div id="version"></div>
+    <div id="settings" class="footer-div-settings">
+      <img src="img/settings.png" class="footer-settings-icon" width="14" height="14" onclick="gotoSettings();" />
+    </div>
+    <div id="saved" class="float-rigth"></div>
+  </div>
+
   <script>
     if (isDevEnvironment(document.domain)) {
-      document.getElementById('DevWarning').style.backgroundColor = 'red';
+      document.getElementById('DevWarning').style.visibility = 'visible';
+    }
+    getVersion()
+      .then(version => {
+        document.getElementById('version').innerText = format_version_data(version);
+        document.getElementById('saved').innerText = format_version_saved(version);
+      });
+    function gotoSettings() {
+      window.location.href = InvestifySettingsUrl;
     }
   </script>
 </body>
