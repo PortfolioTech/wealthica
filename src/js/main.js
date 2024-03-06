@@ -28,7 +28,7 @@ function redirectToDevEnvironment(domain) {
 }
 
 function getVersion() {
-    return fetch('/version.json')
+    return fetch('version.json')
         .then(response => response.json())
         .then(data => {
             return {
